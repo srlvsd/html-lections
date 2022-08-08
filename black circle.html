@@ -1,0 +1,56 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link rel="stylesheet" href="style_keyframe.css">
+</head>
+<body>
+    <style>
+        .key{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.key:before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    top: 40px;
+    animation: eye 3s ease infinite;
+}
+
+.key:after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    top: 40px;
+    animation: eye 3s ease infinite;
+}
+
+.key:before{
+    left: 55px;
+}
+
+.key:after{
+    right: 55px;
+}
+
+@keyframes eye{
+    90% {transform: none}
+    95% {transform: scaleY(.1);}
+}
+</style>
+    <div class="key"></div>
+</body>
+</html>

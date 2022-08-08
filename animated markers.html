@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1;
+    color: #231e20;
+    background: #F2e5d0;
+}
+
+a{
+    text-decoration: none;
+    color:#231e20;
+}
+
+.container{
+    padding: 0 20px 0 80px;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+.toc-wrapper{
+    width: 100%;
+    max-width: 768px;
+    position: relative;
+    padding: 10px 0 10px 20px;
+    margin: 80px auto 40px;
+    border-left: 4px solid #D9AA63;
+}
+
+.toc-wrapper:before{
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: -60px;
+    width: 60px;
+    height: 60px;
+    background: url(toc.svg) 50% 50% no-repeat #D9AA63;
+    background-size: 30px;
+    border-radius: 10px 10px 0 50%;
+}
+
+.toc{
+    list-style: none;
+    counter-reset: li;
+}
+
+.toc li{
+    margin-bottom: 20px;
+    transition: .3s linear;
+}
+
+.toc li:last-child{
+    margin-bottom: 0;
+}
+
+.toc li:before{
+    counter-increment: li;
+    content: counters(li, "");
+    margin-bottom: 10px;
+    font-weight: 700;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    display: inline-block;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    transition: .3s linear;
+}
+
+.toc li:hover:before{
+    border-color: #D9AA63;
+    color: #D9AA63;
+}
+</style>
+    <div class="conatainer">
+        <section class="toc-wrapper">
+            <h1>
+                Content
+            </h1>
+            <ol class="toc">
+                <li>
+                    <a href="">
+                        What is presentation?
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Interaction in presentation
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        How to create presentation
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Type presentation
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        How to improve effecnicey of presentation
+                    </a>
+                </li>
+            </ol>
+        </section>
+    </div>
+</body>
+</html>

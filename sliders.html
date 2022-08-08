@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_two.css">
+</head>
+<body>
+    <style>
+.button{
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    font-family: monospace;
+    font-size: 16px;
+    color: #232323;
+}
+
+.button span{
+    position: relative;
+}
+
+.button:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 100%;
+    background-color: #c4f1ff;
+    transition: .3s ease-in-out;
+}
+
+.button:hover::before{
+    width: 100%;
+}
+
+
+
+.button-two{
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 15px;
+    color: #383d48;
+}
+
+.button-two span{
+    display: block;
+    overflow: hidden;
+    max-width: 0;
+    opacity: 0;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    line-height: 1;
+    transition: .4s ease;
+}
+
+.button-two:after{
+    content: '\e886';
+    font-family: Linearicons-Free;
+    font-style: none;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 22px;
+}
+
+.button-two:hover span{
+    max-width: 150px;
+    opacity: 1;
+    margin-right: 6px;
+}       
+    </style>
+
+    <style>
+*{
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body{
+   background-color: #fff9f2;
+}
+
+.post-wrap{
+   max-width: 1120px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   
+}
+
+.post-item{
+   padding: 10px;
+
+}
+
+.post-link{
+   text-decoration: none;
+   display: block;
+}
+
+.post-item-wrap{
+   overflow: hidden;
+   position: relative;
+}
+
+.post-item img{
+   display: block;
+   width: 100%;
+}
+
+.text-wrapper{
+   position: absolute;
+   display: flex;
+   justify-content: flex-end;
+   flex-direction: column;
+   height: 100%;
+   top: 0;
+   left: 0;
+   z-index: 10;
+   width: 86%;
+   padding: 20px;
+   background: #FFEFD7;
+   transform: translate3d(-100%, 0, 0);
+   transition: transform .5s cubic-bezier(.33, .02, 0, .93);
+}
+
+.post-item:hover .text-wrapper{
+   transform: translate3d(0, 0, 0);
+   transition: transform .5s cubic-bezier(.33, .02, 0, .93) .3s;
+}
+
+.overlay{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   z-index: 5;
+   background: #d1afa6;
+   transform: translate3d(-100%, 0, 0);
+   transition: transform .4s cubic-bezier(.33, .02, 0, .93) .2s;
+}
+
+.post-item:hover .overlay{
+   transform: translate3d(-100%, 0, 0);
+   transition: transform .5s cubic-bezier(.33, .02, 0, .93);
+}
+
+.post-cat{
+   text-transform: uppercase;
+   margin-bottom: 5px;
+   color: #000200;
+   font-weight: 500;
+}
+
+.post-title{
+   font-size: 12px;
+   font-weight: 400;
+   color: #4A4a40;
+   font-style: italic;
+}
+
+@media (min-width: 768px){
+
+   .post-item{
+      flex-basis: 50%;
+      flex-shrink: 0;
+   }
+}
+
+@media (min-width: 960px){
+   .post-item{
+      flex-basis: 33.33%
+   }
+}
+        
+    </style>
+    <div class="post-wrap">
+        <div class="post-item">
+            <div class="post-item-wrap">
+                <a href="" class="post-link">
+                    <div class="image-wrapper">
+                        <img src="https://cellularnews.com/wp-content/uploads/2020/03/06-aesthetic-grass-wallpaper-1-325x485.jpg" alt="grass">
+                    </div>
+                    <div class="text-wrapper">
+                        <div class="post-cat">
+                            Photo
+                        </div>
+                        <h3 class="post-title">
+                            Just photo
+                        </h3>
+                    </div>
+                    <div class="overlay"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <a href="" class="button">
+        <span>
+            Read
+        </span>
+    </a>
+
+    <a href="" class="button-two">
+        <span>
+            Check it out
+        </span>
+    </a>
+    
+</body>
+</html>

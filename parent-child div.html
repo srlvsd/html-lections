@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+  <style>
+.parent-div{
+    display:flex; /* Отвечает за отображение контента flex автоматом дает значение в линию. Но его можно поменять flex-direction*/
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-between;
+    
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+
+    flex-direction: row-reverse; /* меняет направление flex*/
+    flex-direction: column; /* меняет направление flex*/
+    flex-direction: column-reverse; /* меняет направление flex*/
+}
+
+.child-div{
+    margin: 5px;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    display: inherit;  /* Отвечает за отображение контента*/
+    flex-direction: column
+}
+  </style>
+    <header>
+        Logo
+        Company  name
+        Search
+        Profile
+    </header>
+    
+    <div class="parent-div">
+        <div class="child-div">
+            jhjfds
+            <div>
+                Jss
+            </div>
+            <div>
+                Jss
+            </div>
+        </div>
+        <div class="child-div">
+            kjhdfks
+        </div>
+        <div class="child-div">
+            kjhdfks
+        </div>
+    </div>
+    <div>
+        JHj
+    </div>
+
+    <div>
+        <a target="_blank" href="youtube.com">
+            ss
+        </a>
+    </div>
+
+    <footer>
+        About us
+        Contacts
+        E mail
+        Map
+        Social media
+    </footer>
+</body>
+</html>
